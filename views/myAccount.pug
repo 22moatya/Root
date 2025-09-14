@@ -1,0 +1,56 @@
+extends layout
+
+block content
+  section.account
+    .account-box
+      h2 My Account
+
+      // صورة البروفايل
+      .profile-pic
+        img#profileImage(src="/img/default.png", alt="Profile Picture")
+
+      // بيانات المستخدم
+      .account-info
+        p
+          strong Name:
+          |  
+          span#userName
+        p
+          strong Email:
+          |  
+          span#userEmail
+        p
+          strong Phone:
+          |  
+          span#userPhone
+        p
+          strong Address:
+          |  
+          span#userAddress
+
+      // أزرار
+      a.btn(href="/bookings") View My Bookings
+      button#logoutBtn.btn-logout Logout
+
+      hr
+
+      // فورم تعديل البروفايل
+      form#updateForm(enctype="multipart/form-data")
+        label(for="name") Name
+        input(type="text" name="name" id="name" required)
+
+        label(for="email") Email
+        input(type="email" name="email" id="email" required)
+
+        label(for="phone") Phone
+        input(type="text" name="phone" id="phone")
+
+        label(for="address") Address
+        input(type="text" name="address" id="address")
+
+        label(for="image") Profile Picture
+        input(type="file" name="image" id="image" accept="image/*")
+
+        button.btn(type="submit") Update Profile
+
+    script(src="/js/main.js" defer)

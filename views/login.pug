@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  section.login-hero
+    .form-box
+      h2.text-2xl.font-bold.mb-4 Welcome Back
+      form#loginForm(class="form")
+        input(type="email" name="email" placeholder="Email" required)
+        input(type="password" name="password" placeholder="Password" required)
+
+        button(type="submit" class="btn-submit") Login
+
+      p.switch-text.mt-4 Don’t have an account?
+        a(href="/signup") Sign Up
+
+    script(src="/js/login.js" defer)

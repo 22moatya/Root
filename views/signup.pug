@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  section.signup-hero
+    .form-box
+      h2.text-2xl.font-bold.mb-4 Create Account
+      form(action="/api/users/signup" method="POST" class="form")
+        input(type="text" name="name" placeholder="Full Name" required)
+        input(type="email" name="email" placeholder="Email" required)
+        input(type="password" name="password" placeholder="Password" required)
+        input(type="password" name="passwordConfirm" placeholder="Confirm Password" required)
+
+        button(type="submit" class="btn-submit") Sign Up
+
+      p.switch-text.mt-4 Already have an account?
+        a(href="/login") Login

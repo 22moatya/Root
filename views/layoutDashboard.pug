@@ -1,0 +1,20 @@
+doctype html
+html(lang="en" class="scroll-smooth")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= title
+    link(href="/css/tailwind.css" rel="stylesheet")
+    script(src="/js/main.js" defer)
+  body(class="flex bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white")
+    aside(class="w-64 h-screen bg-white dark:bg-gray-800 shadow-md p-6")
+      h2.text-2xl.font-bold.mb-10 Dashboard
+      ul
+        li.mb-4: a(href="/dashboard/home" class="hover:underline") Home
+        li.mb-4: a(href="/dashboard/services" class="hover:underline") Services
+        li.mb-4: a(href="/dashboard/bookings" class="hover:underline") Bookings
+        li.mb-4: a(href="/dashboard/payments" class="hover:underline") Payments
+        li.mb-4: a(href="/dashboard/reviews" class="hover:underline") Reviews
+        li.mb-4: a(href="/dashboard/settings" class="hover:underline") Settings
+    main(class="flex-1 p-8")
+      block content

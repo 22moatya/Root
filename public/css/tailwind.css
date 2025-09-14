@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ستايلات إضافية خاصة بالمشروع */
+body {
+  font-family: 'Inter', sans-serif;
+}

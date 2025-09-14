@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  section.hero
+    h1 Book Your Service in Minutes
+    p Find trusted providers near you and book instantly.
+    a.btn(href="/services") Explore Services
+
+  section.services
+    h2 Our Services
+    .services-grid
+      each service in services
+        .card
+          img(src=`/img/${service.image}` alt=service.name class="w-full h-40 object-cover rounded")
+          h3= service.name
+          p= service.description
+          p= `duration: ${service.durationMin} minute`
+          p Price: $#{service.basePrice}
+          a.btn(href=`/service/${service._id}`) Book Now
+
+  section.testimonials
+    h2 Testimonials
+    .testimonials-grid
+      each review in reviews
+        .review
+          p= review.comment
+          p - #{review.user}

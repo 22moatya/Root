@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= title
+    link(href="/css/style.css" rel="stylesheet")
+    script(src="/js/main.js" defer)
+  body
+    header.navbar
+      a.logo(href="/") MyBookingPlatform
+      nav
+        a(href="/") Services
+        a(href="/about") About
+        a(href="/bookings") My Bookings
+        a(href="/signup") Signup
+        a(href="/login") Login
+    main
+      block content
+    footer.footer
+      p Eng / Mostafa Atya © 2025 MyBookingPlatform | Follow us on
+      a(href="#") Twitter
+      a(href="#") Facebook
+    
+    script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+    script(src="/js/main.js")
